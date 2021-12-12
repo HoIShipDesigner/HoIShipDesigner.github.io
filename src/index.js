@@ -914,7 +914,7 @@ class App extends Component {
     document.getElementById('sub_detection').innerHTML = funcTw(finalstat["sub_detection"]);
     document.getElementById('mines_planting').innerHTML = funcTh(finalstat["mines_planting"]);
     document.getElementById('mines_sweeping').innerHTML = funcTh(finalstat["mines_sweeping"]);
-    document.getElementById('build_cost_ic').innerHTML = funcNo(finalstat["build_cost_ic"]);
+    document.getElementById('build_cost_ic').innerHTML = funcTh(finalstat["build_cost_ic"]);
     document.getElementById('steel').innerHTML = funcNo(finalstat["steel"]);
     document.getElementById('chromium').innerHTML = funcNo(finalstat["chromium"]);
 
