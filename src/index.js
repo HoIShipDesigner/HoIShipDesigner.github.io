@@ -1380,7 +1380,7 @@ class App extends Component {
                       </td>
                        <td class="stats_cell">
                         <label>Production Cost : </label>
-                        <label id='build_cost_ic'>580</label>
+                        <label id='build_cost_ic'>580.00</label>
                       </td>
                     </tr>
                   </tbody>
