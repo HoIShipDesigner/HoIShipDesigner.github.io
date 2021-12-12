@@ -410,6 +410,7 @@ class App extends Component {
       Convoy_escort_fleet_Designer:{CA:0.3, CL:0.3, DD:0.3},
       Coastal_defence_fleet_Designer:{CV:-0.5, BB:-0.5, BC:-0.5, CA:-0.5, CL:-0.5, DD:-0.5, SS:-0.5},
       Mediterranean_fleet_Designer:{BB:-0.25, BC:-0.25, CA:-0.25, CL:-0.25, DD:-0.25},
+      Black_sea_naval_Manufacturer:{CV:-0.25, CA:-0.25, CL:-0.25, DD:-0.25, SS:-0.25},
       Romanian_coastal_defence_fleet_Designer:{CA:-0.5, CL:-0.5, DD:-0.5},
       Romanian_Black_Sea_dominance_Designer:{BB:-0.5, BC:-0.5, CA:-0.5, CL:-0.5}},
     max_organisation : {},
@@ -481,17 +482,21 @@ class App extends Component {
       Trade_Interdiction_Doctrine:{BB:0.25, BC:0.3, CA:0.3, CL:0.3, SS:0.5},
       Base_Strike_Doctrine:{SS:0.25}},
     sub_visibility : {Raiding_fleet_Designer:{SS:-0.1},
+      Black_sea_naval_Manufacturer:{SS:-0.1},
       Submarine_Engine_2:-0.05, Submarine_Engine_3:-0.1, Submarine_Engine_4:-0.15,
       Snorkel_1:-0.1, Snorkel_2:-0.2,},
     sub_detection : {Fleet_in_Being_Doctrine:{CV:0.5, CL:0.35, DD:0.3},
       Trade_Interdiction_Doctrine:{DD:0.05},
       Base_Strike_Doctrine:{CV:0.25,CL:0.25,DD:0.25},
       Battlefleet_Designer:{CA:-0.25, CL:-0.25, DD:-0.25},
-      Convoy_escort_fleet_Designer:{CA:0.1, CL:0.1, DD:0.1}},
+      Convoy_escort_fleet_Designer:{CA:0.1, CL:0.1, DD:0.1},
+      Black_sea_naval_Manufacturer:{CA:0.1, CL:0.1, DD:0.1}},
     mines_planting : {Mines_1:{SS:0.2}},
     mines_sweeping : {},
     build_cost_ic : {Convoy_escort_fleet_Designer:{CA:0.1, CL:0.1, DD:0.1},
       Coastal_defence_fleet_Designer:{CV:-0.25, BB:-0.25, BC:-0.25, CA:-0.25, CL:-0.25, DD:-0.25, SS:-0.25},
+      Black_sea_naval_Manufacturer:{CV:0.15, CA:-0.15, CL:-0.15, DD:-0.15, SS:-0.15},
+      Repair_and_refurbishment_Plant:{CV:-0.05, BB:-0.05, BC:-0.05, CA:-0.05, CL:-0.05, DD:-0.05, SS:-0.05},
       Romanian_coastal_defence_fleet_Designer:{CA:-0.2, CL:-0.2, DD:-0.2},
       Anti_Air_1:0.025, Anti_Air_2:0.025, Anti_Air_3:0.025, Anti_Air_4:0.025,
       Extra_Fuel_Tank:0.05,
@@ -1125,11 +1130,13 @@ class App extends Component {
                             <option value="No_Designer">No designer</option>
                             <option value="Atlantic_fleet_Designer">Atlantic fleet designer</option>
                             <option value="Battlefleet_Designer">Battlefleet designer</option>
+                            <option value="Black_sea_naval_Manufacturer">Black sea naval designer</option>
                             <option value="Coastal_defence_fleet_Designer">Coastal defence fleet designer</option>
                             <option value="Convoy_escort_fleet_Designer">Convoy escort fleet designer</option>
                             <option value="Mediterranean_fleet_Designer">Mediterranean fleet designer</option>
                             <option value="Pacific_fleet_Designer">Pacific fleet designer</option>
                             <option value="Raiding_fleet_Designer">Raiding fleet designer</option>
+                            <option value="Repair_and_refurbishment_Plant">Repair-refurbishment Plant</option>
                             <option value="Romanian_Black_Sea_dominance_Designer">Braila shipyards</option>
                             <option value="Romanian_coastal_defence_fleet_Designer">Galati shipyard</option>
                           </select>
