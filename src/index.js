@@ -1069,7 +1069,7 @@ class App extends Component {
         <div class="title">
           <br/>
           <p id="title1">Naval calculator</p>
-          <p id="title2">Hearts of Iron IV 1.9.3</p>
+          <p id="title2">Hearts of Iron IV 1.11.3</p>
           <br/>
         </div>
         <br/>
