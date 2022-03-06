@@ -93,11 +93,11 @@ class App extends Component {
   ];
   
   supply_consumption = [
-    0.01, 0.01, 0.01, 0.01,
-    0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, // Woraround for CA and CL having different supply values
-    0.14, 0.14, 0.14, 0.14, 0.14, 0.20,       // Side effect of previous line
-    0.01, 0.01, 0.01, 0.01, 0.01,
-    0.3, 0.3, 0.3, 0.3, 0.3
+    0.04, 0.04, 0.04, 0.04,
+    0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, // Woraround for CA and CL having different supply values
+    0.56, 0.56, 0.56, 0.56, 0.56, 0.80,       // Side effect of previous line
+    0.04, 0.04, 0.04, 0.04, 0.04,
+    1.2, 1.2, 1.2, 1.2, 1.2
   ];
   
   manpower = [
@@ -354,8 +354,8 @@ class App extends Component {
     max_organisation : {},
     max_strength : {Light_Cruiser_Battery_1:20, Light_Cruiser_Battery_2:20, Light_Cruiser_Battery_3:20, Light_Cruiser_Battery_4:20},
     reliability : {},
-    supply_consumption : {Heavy_Cruiser_Battery_1:0.06, Heavy_Cruiser_Battery_2:0.06, Heavy_Cruiser_Battery_3:0.06, Heavy_Cruiser_Battery_4:0.06, // Woraround for CA and CL having different supply values
-      Heavy_Battery_1:0.06, Heavy_Battery_2:0.06, Heavy_Battery_3:0.06, Heavy_Battery_4:0.06},                                                     // Woraround for CA and CL having different supply values
+    supply_consumption : {Heavy_Cruiser_Battery_1:0.24, Heavy_Cruiser_Battery_2:0.24, Heavy_Cruiser_Battery_3:0.24, Heavy_Cruiser_Battery_4:0.24, // Woraround for CA and CL having different supply values
+      Heavy_Battery_1:0.24, Heavy_Battery_2:0.24, Heavy_Battery_3:0.24, Heavy_Battery_4:0.24},                                                     // Woraround for CA and CL having different supply values
     manpower : {},
     carrier_size : {},
     lg_attack : {},
