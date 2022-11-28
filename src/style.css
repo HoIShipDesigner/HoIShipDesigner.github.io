@@ -540,3 +540,7 @@ td{
   width:0px;
   margin-left: -3000px;
 }
+#is_cruiser_valid {
+  font-weight: bold;
+  color: red;
+}
