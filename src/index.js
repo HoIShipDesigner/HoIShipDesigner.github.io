@@ -1374,12 +1374,13 @@ class App extends Component {
         Object.keys(equ).indexOf("Light_Battery_3") != -1 ||
         Object.keys(equ).indexOf("Light_Battery_4") != -1
       ) {
-        document.getElementById("is_cruiser_valid").innerHTML = "invalid";
+        document.getElementById("is_cruiser_valid").innerHTML =
+          "This cruiser is invalid";
       } else {
-        document.getElementById("is_cruiser_valid").innerHTML = "valid";
+        document.getElementById("is_cruiser_valid").innerHTML = "";
       }
     } else {
-      document.getElementById("is_cruiser_valid").innerHTML = "valid";
+      document.getElementById("is_cruiser_valid").innerHTML = "";
     }
 
     // Writes all the values into the html for the user to see
