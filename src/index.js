@@ -1838,7 +1838,9 @@ class App extends Component {
             <option value="26">1940 CV Hull</option>
             <option value="27">1944 CV Hull</option>
           </select>
-          <label id="is_cruiser_valid"></label>
+          <div class="icv_div">
+            <label id="is_cruiser_valid"></label>
+          </div>
         </div>
         <br />
         <br />
