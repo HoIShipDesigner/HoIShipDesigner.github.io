@@ -1625,7 +1625,7 @@ class App extends Component {
     document.getElementById("mines_sweeping").innerHTML = funcTh(
       finalstat["mines_sweeping"]
     );
-    document.getElementById("build_cost_ic").innerHTML = funcTh(
+    document.getElementById("build_cost_ic").innerHTML = funcNo(
       finalstat["build_cost_ic"]
     );
     document.getElementById("steel").innerHTML = funcNo(finalstat["steel"]);
@@ -2046,7 +2046,7 @@ class App extends Component {
                     <tr>
                       <td class="stats_cell">
                         <label>Max Speed : </label>
-                        <label id="naval_speed">36.0 kn</label>
+                        <label id="naval_speed">35.7 kn</label>
                       </td>
                       <td class="stats_cell">
                         <label>Light Attack : </label>
@@ -2074,7 +2074,7 @@ class App extends Component {
                     <tr>
                       <td class="stats_cell">
                         <label>Organization : </label>
-                        <label id="max_organisation">40.0</label>
+                        <label id="max_organisation">35.0</label>
                       </td>
                       <td class="stats_cell">
                         <label>Heavy Attack : </label>
@@ -2102,7 +2102,7 @@ class App extends Component {
                     <tr>
                       <td class="stats_cell">
                         <label>Reliability : </label>
-                        <label id="reliability">64.0 %</label>
+                        <label id="reliability">80.0 %</label>
                       </td>
                       <td class="stats_cell">
                         <label>Torpedo Attack : </label>
@@ -2116,7 +2116,7 @@ class App extends Component {
                     <tr>
                       <td class="stats_cell">
                         <label>Supply Use : </label>
-                        <label id="supply_consumption">0.01</label>
+                        <label id="supply_consumption">0.04</label>
                       </td>
                       <td class="stats_cell">
                         <label>Depth Charges : </label>
@@ -2162,7 +2162,7 @@ class App extends Component {
                       </td>
                       <td class="stats_cell">
                         <label>Production Cost : </label>
-                        <label id="build_cost_ic">580.00</label>
+                        <label id="build_cost_ic">580</label>
                       </td>
                     </tr>
                   </tbody>
