@@ -1212,10 +1212,10 @@ class App extends Component {
         return "BB";
       }
     }
-    if (scop.set >= 17 && scop.set < 22) {
+    if (scop.set >= 17 && scop.set < 23) {
       return "SS";
     }
-    if (scop.set >= 22 && scop.set < 27) {
+    if (scop.set >= 23 && scop.set < 28) {
       return "CV";
     }
   }
@@ -1802,7 +1802,7 @@ class App extends Component {
         <div class="title">
           <br />
           <p id="title1">Naval calculator</p>
-          <p id="title2">Hearts of Iron IV 1.11.3</p>
+          <p id="title2">Hearts of Iron IV 1.12.6</p>
           <br />
         </div>
         <br />
