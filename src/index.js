@@ -274,7 +274,9 @@ class App extends Component {
 
   //Stat Addition per equipment piece
   add = {
-    naval_speed: {},
+    naval_speed: {
+      Minelaying_Tubes: -0.02
+	},
     naval_range: { Extra_Fuel_Tank: 1000 },
     max_organisation: {
       Fleet_in_Being_Doctrine: {
@@ -311,8 +313,8 @@ class App extends Component {
     supply_consumption: {},
     manpower: { Hangar_Space: 500 },
     carrier_size: {
-      Hangar_Space: 2,
-      Pacific_fleet_Designer: { CV: 1 }
+      Hangar_Space: 20,
+      Pacific_fleet_Designer: { CV: 10 }
     },
     lg_attack: {
       Light_Battery_1: 1,
@@ -475,18 +477,18 @@ class App extends Component {
       DP_Secondary_Battery_2: 200,
       DP_Secondary_Battery_3: 240,
       DP_Secondary_Battery_4: 290,
-      Anti_Air_1: 100,
-      Anti_Air_2: 130,
-      Anti_Air_3: 160,
-      Anti_Air_4: 190,
+      Anti_Air_1: 80,
+      Anti_Air_2: 110,
+      Anti_Air_3: 140,
+      Anti_Air_4: 170,
       Fire_Control_0: 60,
       Fire_Control_1: 135,
       Fire_Control_2: 165,
       Fire_Control_3: 225,
-      Radar_1: 80,
-      Radar_2: 110,
-      Radar_3: 140,
-      Radar_4: 170,
+      Radar_1: 100,
+      Radar_2: 130,
+      Radar_3: 160,
+      Radar_4: 190,
       Light_Engine_1: 90,
       Light_Engine_2: 120,
       Light_Engine_3: 150,
@@ -662,8 +664,8 @@ class App extends Component {
         CL: 0.1,
         DD: 0.1
       },
-      Italian_submarine_Designer: { SS: 0.1 },
-      Improved_italian_submarine_Designer: { SS: 0.1 },
+      Submarine_designer: { SS: 0.1 },
+      Improved_Submarine_designer: { SS: 0.15 },
       Mediterranean_fleet_Designer: {
         BB: 0.1,
         BC: 0.1,
@@ -732,7 +734,6 @@ class App extends Component {
       Torpedo_Tubes_3: -0.03,
       Torpedo_Tubes_4: -0.04,
       Minelaying_Rails: -0.02,
-      Minelaying_Tubes: -0.02,
       Minesweeping_Gears: -0.02,
       Depth_Charge_1: -0.01,
       Depth_Charge_2: -0.01,
@@ -778,8 +779,8 @@ class App extends Component {
         DD: -0.5,
         SS: -0.5
       },
-      Italian_submarine_Designer: { SS: 0.1 },
-      Improved_italian_submarine_Designer: { SS: 0.1 },
+      Submarine_designer: { SS: 0.1 },
+      Improved_Submarine_designer: { SS: 0.1 },
       Mediterranean_fleet_Designer: {
         BB: -0.25,
         BC: -0.25,
@@ -1008,8 +1009,8 @@ class App extends Component {
         DD: -0.1,
         SS: -0.1
       },
-      Italian_submarine_Designer: { SS: -0.1 },
-      Improved_italian_submarine_Designer: { SS: -0.1 }
+      Submarine_designer: { SS: -0.1 },
+      Improved_Submarine_designer: { SS: -0.1 }
     },
     surface_detection: {
       Fleet_in_Being_Doctrine: {
@@ -1029,8 +1030,8 @@ class App extends Component {
     sub_visibility: {
       Raiding_fleet_Designer: { SS: -0.1 },
       Black_sea_naval_Manufacturer: { SS: -0.1 },
-      Italian_submarine_Designer: { SS: -0.1 },
-      Improved_italian_submarine_Designer: { SS: -0.1 },
+      Submarine_designer: { SS: -0.1 },
+      Improved_Submarine_designer: { SS: -0.1 },
       Submarine_Engine_2: -0.05,
       Submarine_Engine_3: -0.1,
       Submarine_Engine_4: -0.15,
@@ -1068,7 +1069,7 @@ class App extends Component {
     mines_planting: { Mines_1: { SS: 0.2 } },
     mines_sweeping: {},
     build_cost_ic: {
-      Italian_submarine_Designer: {
+      Submarine_designer: {
         CV: 0.1,
         BB: 0.1,
         BC: 0.1,
@@ -1077,7 +1078,7 @@ class App extends Component {
         DD: 0.1,
         SS: -0.1
       },
-      Improved_italian_submarine_Designer: {
+      Improved_Submarine_designer: {
         CV: 0.1,
         BB: 0.1,
         BC: 0.1,
@@ -1870,8 +1871,8 @@ class App extends Component {
                             <option value="Black_sea_naval_Manufacturer">Black sea naval designer</option>
                             <option value="Coastal_defence_fleet_Designer">Coastal defence fleet designer</option>
                             <option value="Convoy_escort_fleet_Designer">Convoy escort fleet designer</option>
-                            <option value="Italian_submarine_Designer">Italian submarine designer</option>
-                            <option value="Improved_italian_submarine_Designer">Improved italian submarine designer</option>
+                            <option value="Submarine_designer">Submarine designer</option>
+                            <option value="Improved_Submarine_designer">Improved submarine designer</option>
                             <option value="Mediterranean_fleet_Designer">Mediterranean fleet designer</option>
                             <option value="Pacific_fleet_Designer">Pacific fleet designer</option>
                             <option value="Raiding_fleet_Designer">Raiding fleet designer</option>
@@ -2820,10 +2821,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -2835,10 +2836,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -2935,10 +2936,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -2986,10 +2987,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
             <option value="Minelaying_Rails">Minelaying Rails</option>
           </select>
           <select class="equipselect" id="slot2">
@@ -3023,10 +3024,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
             <option value="Minelaying_Rails">Minelaying Rails</option>
           </select>
           <select class="equipselect" id="slot3">
@@ -3140,10 +3141,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -3215,10 +3216,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
             <option value="Minelaying_Rails">Minelaying Rails</option>
           </select>
           <select class="equipselect" id="slot3">
@@ -3252,10 +3253,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
             <option value="Minelaying_Rails">Minelaying Rails</option>
           </select>
           <select class="equipselect" id="slot4">
@@ -3366,10 +3367,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -3441,10 +3442,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -3477,10 +3478,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -3618,10 +3619,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -3693,10 +3694,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -3729,10 +3730,10 @@ class App extends Component {
             <option value="Torpedo_Launcher_4">Torpedo Launcher 4</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -3870,10 +3871,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -4022,10 +4023,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -4059,10 +4060,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -4074,10 +4075,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4157,10 +4158,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Empty">Empty</option>
@@ -4194,10 +4195,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
             <option value="Torpedo_Launcher_1">Torpedo Launcher 1</option>
             <option value="Torpedo_Launcher_2">Torpedo Launcher 2</option>
             <option value="Torpedo_Launcher_3">Torpedo Launcher 3</option>
@@ -4274,10 +4275,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Battleship_Armor_1">Battleship Armor 1</option>
@@ -4316,10 +4317,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -4331,10 +4332,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4408,10 +4409,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Battleship_Armor_1">Battleship Armor 1</option>
@@ -4454,10 +4455,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -4473,10 +4474,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4492,10 +4493,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot5">
             <option value="Locked">Locked</option>
@@ -4558,10 +4559,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Battleship_Armor_1">Battleship Armor 1</option>
@@ -4604,10 +4605,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -4623,10 +4624,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4642,10 +4643,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot5">
             <option value="Empty">Empty</option>
@@ -4718,10 +4719,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Battleship_Armor_1">Battleship Armor 1</option>
@@ -4764,10 +4765,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -4783,10 +4784,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4802,10 +4803,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot5">
             <option value="Empty">Empty</option>
@@ -4821,10 +4822,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot6">
             <option value="Locked">Locked</option>
@@ -4884,10 +4885,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Battleship_Armor_1">Battleship Armor 1</option>
@@ -4929,10 +4930,10 @@ class App extends Component {
             <option value="Anti_Air_4" class="grey">Anti-Air 4</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Empty">Empty</option>
@@ -4942,10 +4943,10 @@ class App extends Component {
             <option value="Anti_Air_4" class="grey">Anti-Air 4</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot5">
             <option value="Empty">Empty</option>
@@ -4955,10 +4956,10 @@ class App extends Component {
             <option value="Anti_Air_4" class="grey">Anti-Air 4</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot6">
             <option value="Empty">Empty</option>
@@ -4971,10 +4972,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot7">
             <option value="Empty">Empty</option>
@@ -4987,10 +4988,10 @@ class App extends Component {
             <option value="Floatplane_Catapult_2" class="grey">Floatplane Catapult 2</option>
             <option value="Secondary_Battery_1">Secondary Battery 1</option>
             <option value="Secondary_Battery_2">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4">DP Secondary Battery 4</option>
           </select>
 
           <div id="picdiv">
@@ -5040,10 +5041,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="SH_Armor">Super Heavy Armor</option>
@@ -5622,10 +5623,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Locked">Locked</option>
@@ -5644,10 +5645,10 @@ class App extends Component {
             <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot2">
             <option value="Locked">Locked</option>
@@ -5718,10 +5719,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Locked">Locked</option>
@@ -5740,10 +5741,10 @@ class App extends Component {
             <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot2">
             <option value="Locked">Locked</option>
@@ -5810,10 +5811,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Locked">Locked</option>
@@ -5841,10 +5842,10 @@ class App extends Component {
             <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Locked">Locked</option>
@@ -5908,10 +5909,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Locked">Locked</option>
@@ -5939,10 +5940,10 @@ class App extends Component {
             <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Empty">Empty</option>
@@ -5950,10 +5951,10 @@ class App extends Component {
             <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Locked">Locked</option>
@@ -6014,10 +6015,10 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_1" class="grey">Dual Purpose Secondary Battery 1</option>
-            <option value="DP_Secondary_Battery_2" class="grey">Dual Purpose Secondary Battery 2</option>
-            <option value="DP_Secondary_Battery_3" class="grey">Dual Purpose Secondary Battery 3</option>
-            <option value="DP_Secondary_Battery_4" class="grey">Dual Purpose Secondary Battery 4</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
             <option value="Locked">Locked</option>
