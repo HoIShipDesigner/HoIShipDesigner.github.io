@@ -2192,7 +2192,7 @@ class App extends Component {
 
     if (this.queryString.length != 0 && this.onceever == 0) {
       this.set = this.urlParams.get("hull");
-      acopy["props"]["children"][3]["props"]["children"]["props"]["children"][
+      acopy["props"]["children"][3]["props"]["children"][0]["props"]["children"][
         this.set
       ]["props"]["selected"] = true;
     }
