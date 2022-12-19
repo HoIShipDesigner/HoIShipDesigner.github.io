@@ -279,31 +279,9 @@ class App extends Component {
 	},
     naval_range: { Extra_Fuel_Tank: 1000 },
     max_organisation: {
-      Fleet_in_Being_Doctrine: {
-        CV: 30,
-        BB: 50,
-        BC: 30,
-        CA: 30,
-        CL: 15,
-        DD: 20,
-        SS: 40
-      },
-      Trade_Interdiction_Doctrine: {
-        CV: 60,
-        BB: 50,
-        BC: 40,
-        CA: 40,
-        CL: 30,
-        DD: 5,
-        SS: 50
-      },
-      Base_Strike_Doctrine: {
-        CV: 120,
-        BB: 20,
-        CL: 50,
-        DD: 20,
-        SS: 40
-      }
+      Fleet_in_Being_Doctrine: { CV: 30, BB: 50, BC: 30, CA: 30, CL: 15, DD: 20, SS: 40 },
+      Trade_Interdiction_Doctrine: { CV: 60, BB: 50, BC: 40, CA: 40, CL: 30, DD: 5, SS: 50 },
+      Base_Strike_Doctrine: { CV: 120, BB: 20, CL: 50, DD: 20, SS: 40 }
     },
     max_strength: {
       Trade_Interdiction_Doctrine: { SS: 0.2 },
@@ -317,130 +295,60 @@ class App extends Component {
       Pacific_fleet_Designer: { CV: 10 }
     },
     lg_attack: {
-      Light_Battery_1: 1,
-      Light_Battery_2: 1.5,
-      Light_Battery_3: 2,
-      Light_Battery_4: 3,
-      DP_Light_Battery_1: 1,
-      DP_Light_Battery_2: 1.5,
-      DP_Light_Battery_3: 2,
-      DP_Light_Battery_4: 2.5,
-      Light_Cruiser_Battery_1: 4,
-      Light_Cruiser_Battery_2: 5,
-      Light_Cruiser_Battery_3: 6,
-      Light_Cruiser_Battery_4: 7.5,
+      Light_Battery_1: 1, Light_Battery_2: 1.5, Light_Battery_3: 2, Light_Battery_4: 3,
+      DP_Light_Battery_1: 1, DP_Light_Battery_2: 1.5, DP_Light_Battery_3: 2, DP_Light_Battery_4: 2.5,
+      Light_Cruiser_Battery_1: 4, Light_Cruiser_Battery_2: 5, Light_Cruiser_Battery_3: 6, Light_Cruiser_Battery_4: 7.5,
       DP_Light_Cruiser_Battery: 7.5,
-      Secondary_Battery_1: 3,
-      Secondary_Battery_2: 4,
-      DP_Secondary_Battery_1: 2,
-      DP_Secondary_Battery_2: 3,
-      DP_Secondary_Battery_3: 4,
-      DP_Secondary_Battery_4: 4.5
+      Secondary_Battery_1: 3, Secondary_Battery_2: 4,
+      DP_Secondary_Battery_1: 2, DP_Secondary_Battery_2: 3, DP_Secondary_Battery_3: 4, DP_Secondary_Battery_4: 4.5
     },
     lg_armor_piercing: {},
     hg_attack: {
-      Heavy_Cruiser_Battery_1: 6,
-      Heavy_Cruiser_Battery_2: 8,
-      Heavy_Cruiser_Battery_3: 10,
-      Heavy_Cruiser_Battery_4: 12,
-      Heavy_Battery_1: 14,
-      Heavy_Battery_2: 18,
-      Heavy_Battery_3: 22,
-      Heavy_Battery_4: 26,
+      Heavy_Cruiser_Battery_1: 6, Heavy_Cruiser_Battery_2: 8, Heavy_Cruiser_Battery_3: 10, Heavy_Cruiser_Battery_4: 12,
+      Heavy_Battery_1: 14, Heavy_Battery_2: 18, Heavy_Battery_3: 22, Heavy_Battery_4: 26,
       SH_Battery: 27
     },
     hg_armor_piercing: {},
     torpedo_attack: {
-      Torpedo_Launcher_1: 18,
-      Torpedo_Launcher_2: 24,
-      Torpedo_Launcher_3: 30,
-      Torpedo_Launcher_4: 36,
-      Torpedo_Tubes_1: 14,
-      Torpedo_Tubes_2: 18,
-      Torpedo_Tubes_3: 22,
-      Torpedo_Tubes_4: 28
+      Torpedo_Launcher_1: 18, Torpedo_Launcher_2: 24, Torpedo_Launcher_3: 30, Torpedo_Launcher_4: 36,
+      Torpedo_Tubes_1: 14, Torpedo_Tubes_2: 18, Torpedo_Tubes_3: 22, Torpedo_Tubes_4: 28
     },
     sub_attack: {
-      Depth_Charge_1: 8,
-      Depth_Charge_2: 12,
-      Depth_Charge_3: 16,
-      Depth_Charge_4: 20
+      Depth_Charge_1: 8, Depth_Charge_2: 12, Depth_Charge_3: 16, Depth_Charge_4: 20
     },
     armor_value: {
-      Cruiser_Armor_1: 6,
-      Cruiser_Armor_2: 8,
-      Cruiser_Armor_3: 10,
-      Cruiser_Armor_4: 12,
-      Battlecruiser_Armor_1: 22,
-      Battlecruiser_Armor_2: 28,
-      Battlecruiser_Armor_3: 34,
-      Battleship_Armor_1: 30,
-      Battleship_Armor_2: 36,
-      Battleship_Armor_3: 40,
+      Cruiser_Armor_1: 6, Cruiser_Armor_2: 8, Cruiser_Armor_3: 10, Cruiser_Armor_4: 12,
+      Battlecruiser_Armor_1: 22, Battlecruiser_Armor_2: 28, Battlecruiser_Armor_3: 34,
+      Battleship_Armor_1: 30, Battleship_Armor_2: 36, Battleship_Armor_3: 40,
       SH_Armor: 55,
       Carrier_Armor: 5
     },
     anti_air_attack: {
-      DP_Light_Battery_1: 1,
-      DP_Light_Battery_2: 2,
-      DP_Light_Battery_3: 3,
-      DP_Light_Battery_4: 4,
+      DP_Light_Battery_1: 1, DP_Light_Battery_2: 2, DP_Light_Battery_3: 3, DP_Light_Battery_4: 4,
       DP_Light_Cruiser_Battery: 4.5,
-      DP_Secondary_Battery_1: 1,
-      DP_Secondary_Battery_2: 2,
-      DP_Secondary_Battery_3: 2.5,
-      DP_Secondary_Battery_4: 3,
-      Anti_Air_1: 2.5,
-      Anti_Air_2: 3.5,
-      Anti_Air_3: 4.5,
-      Anti_Air_4: 5.5
+      DP_Secondary_Battery_1: 1, DP_Secondary_Battery_2: 2, DP_Secondary_Battery_3: 2.5, DP_Secondary_Battery_4: 3,
+      Anti_Air_1: 2.5, Anti_Air_2: 3.5, Anti_Air_3: 4.5, Anti_Air_4: 5.5
     },
     fuel_consumption: {
-      Light_Engine_1: 7,
-      Light_Engine_2: 8,
-      Light_Engine_3: 10,
-      Light_Engine_4: 10,
-      Cruiser_Engine_1: 12,
-      Cruiser_Engine_2: 16,
-      Cruiser_Engine_3: 20,
-      Cruiser_Engine_4: 24,
-      Heavy_Engine_1: 20,
-      Heavy_Engine_2: 25,
-      Heavy_Engine_3: 30,
-      Heavy_Engine_4: 35,
-      Submarine_Engine_1: 7,
-      Submarine_Engine_2: 8,
-      Submarine_Engine_3: 10,
-      Submarine_Engine_4: 10,
-      Carrier_Engine_1: 12,
-      Carrier_Engine_2: 16,
-      Carrier_Engine_3: 20,
-      Carrier_Engine_4: 24
+      Light_Engine_1: 7, Light_Engine_2: 8, Light_Engine_3: 10, Light_Engine_4: 10,
+      Cruiser_Engine_1: 12, Cruiser_Engine_2: 16, Cruiser_Engine_3: 20, Cruiser_Engine_4: 24,
+      Heavy_Engine_1: 20, Heavy_Engine_2: 25, Heavy_Engine_3: 30, Heavy_Engine_4: 35,
+      Submarine_Engine_1: 7, Submarine_Engine_2: 8, Submarine_Engine_3: 10, Submarine_Engine_4: 10,
+      Carrier_Engine_1: 12, Carrier_Engine_2: 16, Carrier_Engine_3: 20, Carrier_Engine_4: 24
     },
     surface_visibility: {
-      Heavy_Cruiser_Battery_1: 3.5,
-      Heavy_Cruiser_Battery_2: 3.5,
-      Heavy_Cruiser_Battery_3: 3.5,
-      Heavy_Cruiser_Battery_4: 3.5,
+      Heavy_Cruiser_Battery_1: 3.5, Heavy_Cruiser_Battery_2: 3.5, Heavy_Cruiser_Battery_3: 3.5, Heavy_Cruiser_Battery_4: 3.5,
       SH_Armor: 10
     },
     surface_detection: {
-      Radar_1: 5,
-      Radar_2: 7,
-      Radar_3: 12,
-      Radar_4: 18,
-      Floatplane_Catapult_1: 7,
-      Floatplane_Catapult_2: 10
+      Radar_1: 5, Radar_2: 7, Radar_3: 12, Radar_4: 18,
+      Floatplane_Catapult_1: 7, Floatplane_Catapult_2: 10
     },
     sub_visibility: {},
     sub_detection: {
-      Radar_2: 2,
-      Radar_3: 6,
-      Radar_4: 14,
-      Floatplane_Catapult_1: 2.5,
-      Floatplane_Catapult_2: 3.5,
-      Sonar_1: 6,
-      Sonar_2: 10
+      Radar_2: 2, Radar_3: 6, Radar_4: 14,
+      Floatplane_Catapult_1: 2.5, Floatplane_Catapult_2: 3.5,
+      Sonar_1: 6, Sonar_2: 10
     },
     mines_planting: {
       Minelaying_Rails: 1,
@@ -449,123 +357,51 @@ class App extends Component {
     },
     mines_sweeping: { Minesweeping_Gears: 1 },
     build_cost_ic: {
-      Light_Battery_1: 90,
-      Light_Battery_2: 120,
-      Light_Battery_3: 150,
-      Light_Battery_4: 175,
-      DP_Light_Battery_1: 100,
-      DP_Light_Battery_2: 130,
-      DP_Light_Battery_3: 160,
-      DP_Light_Battery_4: 185,
-      Light_Cruiser_Battery_1: 300,
-      Light_Cruiser_Battery_2: 350,
-      Light_Cruiser_Battery_3: 375,
-      Light_Cruiser_Battery_4: 425,
+      Light_Battery_1: 90, Light_Battery_2: 120, Light_Battery_3: 150, Light_Battery_4: 175,
+      DP_Light_Battery_1: 100, DP_Light_Battery_2: 130, DP_Light_Battery_3: 160, DP_Light_Battery_4: 185,
+      Light_Cruiser_Battery_1: 300, Light_Cruiser_Battery_2: 350, Light_Cruiser_Battery_3: 375, Light_Cruiser_Battery_4: 425,
       DP_Light_Cruiser_Battery: 450,
-      Heavy_Cruiser_Battery_1: 750,
-      Heavy_Cruiser_Battery_2: 800,
-      Heavy_Cruiser_Battery_3: 825,
-      Heavy_Cruiser_Battery_4: 900,
-      Heavy_Battery_1: 1250,
-      Heavy_Battery_2: 1350,
-      Heavy_Battery_3: 1450,
-      Heavy_Battery_4: 1550,
+      Heavy_Cruiser_Battery_1: 750, Heavy_Cruiser_Battery_2: 800, Heavy_Cruiser_Battery_3: 825, Heavy_Cruiser_Battery_4: 900,
+      Heavy_Battery_1: 1250, Heavy_Battery_2: 1350, Heavy_Battery_3: 1450, Heavy_Battery_4: 1550,
       SH_Battery: 1700,
-      Secondary_Battery_1: 180,
-      Secondary_Battery_2: 240,
-      DP_Secondary_Battery_1: 180,
-      DP_Secondary_Battery_2: 200,
-      DP_Secondary_Battery_3: 240,
-      DP_Secondary_Battery_4: 290,
-      Anti_Air_1: 80,
-      Anti_Air_2: 110,
-      Anti_Air_3: 140,
-      Anti_Air_4: 170,
-      Fire_Control_0: 60,
-      Fire_Control_1: 135,
-      Fire_Control_2: 165,
-      Fire_Control_3: 225,
-      Radar_1: 100,
-      Radar_2: 130,
-      Radar_3: 160,
-      Radar_4: 190,
-      Light_Engine_1: 90,
-      Light_Engine_2: 120,
-      Light_Engine_3: 150,
-      Light_Engine_4: 170,
-      Cruiser_Engine_1: 400,
-      Cruiser_Engine_2: 480,
-      Cruiser_Engine_3: 550,
-      Cruiser_Engine_4: 670,
-      Heavy_Engine_1: 1800,
-      Heavy_Engine_2: 2200,
-      Heavy_Engine_3: 2800,
-      Heavy_Engine_4: 3200,
-      Submarine_Engine_1: 90,
-      Submarine_Engine_2: 120,
-      Submarine_Engine_3: 150,
-      Submarine_Engine_4: 170,
-      Carrier_Engine_1: 400,
-      Carrier_Engine_2: 480,
-      Carrier_Engine_3: 550,
-      Carrier_Engine_4: 670,
-      Torpedo_Launcher_1: 90,
-      Torpedo_Launcher_2: 120,
-      Torpedo_Launcher_3: 150,
-      Torpedo_Launcher_4: 180,
-      Torpedo_Tubes_1: 80,
-      Torpedo_Tubes_2: 100,
-      Torpedo_Tubes_3: 120,
-      Torpedo_Tubes_4: 140,
+      Secondary_Battery_1: 180, Secondary_Battery_2: 240,
+      DP_Secondary_Battery_1: 180, DP_Secondary_Battery_2: 200, DP_Secondary_Battery_3: 240, DP_Secondary_Battery_4: 290,
+      Anti_Air_1: 80, Anti_Air_2: 110, Anti_Air_3: 140, Anti_Air_4: 170,
+      Fire_Control_0: 60, Fire_Control_1: 135, Fire_Control_2: 165, Fire_Control_3: 225,
+      Radar_1: 100, Radar_2: 130, Radar_3: 160, Radar_4: 190,
+      Light_Engine_1: 90, Light_Engine_2: 120, Light_Engine_3: 150, Light_Engine_4: 170,
+      Cruiser_Engine_1: 400, Cruiser_Engine_2: 480, Cruiser_Engine_3: 550, Cruiser_Engine_4: 670,
+      Heavy_Engine_1: 1800, Heavy_Engine_2: 2200, Heavy_Engine_3: 2800, Heavy_Engine_4: 3200,
+      Submarine_Engine_1: 90, Submarine_Engine_2: 120, Submarine_Engine_3: 150, Submarine_Engine_4: 170,
+      Carrier_Engine_1: 400, Carrier_Engine_2: 480, Carrier_Engine_3: 550, Carrier_Engine_4: 670,
+      Torpedo_Launcher_1: 90, Torpedo_Launcher_2: 120, Torpedo_Launcher_3: 150, Torpedo_Launcher_4: 180,
+      Torpedo_Tubes_1: 80, Torpedo_Tubes_2: 100, Torpedo_Tubes_3: 120, Torpedo_Tubes_4: 140,
       Minelaying_Rails: 90,
       Minelaying_Tubes: 90,
       Minesweeping_Gears: 30,
-      Depth_Charge_1: 90,
-      Depth_Charge_2: 120,
-      Depth_Charge_3: 150,
-      Depth_Charge_4: 180,
-      Snorkel_1: 50,
-      Snorkel_2: 70,
-      Floatplane_Catapult_1: 150,
-      Floatplane_Catapult_2: 170,
+      Depth_Charge_1: 90, Depth_Charge_2: 120, Depth_Charge_3: 150, Depth_Charge_4: 180,
+      Snorkel_1: 50, Snorkel_2: 70,
+      Floatplane_Catapult_1: 150, Floatplane_Catapult_2: 170,
       Hangar_Space: 1750,
-      Sonar_1: 40,
-      Sonar_2: 60
+      Sonar_1: 40, Sonar_2: 60
     },
     steel: {
       Light_Battery_4: 1,
-      DP_Light_Battery_1: 1,
-      DP_Light_Battery_2: 1,
-      DP_Light_Battery_3: 1,
-      DP_Light_Battery_4: 1,
-      Light_Cruiser_Battery_3: 1,
-      Light_Cruiser_Battery_4: 1,
-      Heavy_Cruiser_Battery_1: 1,
-      Heavy_Cruiser_Battery_2: 1,
-      Heavy_Cruiser_Battery_3: 2,
-      Heavy_Cruiser_Battery_4: 2,
-      Heavy_Battery_1: 1,
-      Heavy_Battery_2: 1,
-      Heavy_Battery_3: 1,
-      Heavy_Battery_4: 1,
+      DP_Light_Battery_1: 1, DP_Light_Battery_2: 1, DP_Light_Battery_3: 1, DP_Light_Battery_4: 1,
+      Light_Cruiser_Battery_3: 1, Light_Cruiser_Battery_4: 1,
+      Heavy_Cruiser_Battery_1: 1, Heavy_Cruiser_Battery_2: 1, Heavy_Cruiser_Battery_3: 2, Heavy_Cruiser_Battery_4: 2,
+      Heavy_Battery_1: 1, Heavy_Battery_2: 1, Heavy_Battery_3: 1, Heavy_Battery_4: 1,
       SH_Battery: 1,
       Hangar_Space: 1,
-      Cruiser_Armor_2: 1,
-      Cruiser_Armor_3: 1,
-      Cruiser_Armor_4: 2,
-      Battlecruiser_Armor_2: 1,
-      Battlecruiser_Armor_3: 1,
-      Battleship_Armor_1: 1,
-      Battleship_Armor_2: 1,
-      Battleship_Armor_3: 2,
-      SH_Armor: 2,
+      Cruiser_Armor_2: 1, Cruiser_Armor_3: 1, Cruiser_Armor_4: 2,
+      Battlecruiser_Armor_2: 1, Battlecruiser_Armor_3: 1,
+      Battleship_Armor_1: 1, Battleship_Armor_2: 1, Battleship_Armor_3: 2, SH_Armor: 2,
       Carrier_Armor: 1
     },
     chromium: {
       Heavy_Battery_4: 1,
       SH_Battery: 1,
-      Cruiser_Armor_3: 1,
-      Cruiser_Armor_4: 1,
+      Cruiser_Armor_3: 1, Cruiser_Armor_4: 1,
       Battlecruiser_Armor_3: 1,
       Battleship_Armor_3: 1,
       SH_Armor: 1
@@ -578,57 +414,29 @@ class App extends Component {
     naval_range: {},
     max_organisation: {},
     max_strength: {
-      Light_Cruiser_Battery_1: 20,
-      Light_Cruiser_Battery_2: 20,
-      Light_Cruiser_Battery_3: 20,
-      Light_Cruiser_Battery_4: 20,
+      Light_Cruiser_Battery_1: 20, Light_Cruiser_Battery_2: 20, Light_Cruiser_Battery_3: 20, Light_Cruiser_Battery_4: 20,
       DP_Light_Cruiser_Battery: 20
     },
     reliability: {},
     supply_consumption: {
-      Heavy_Cruiser_Battery_1: 0.24,
-      Heavy_Cruiser_Battery_2: 0.24,
-      Heavy_Cruiser_Battery_3: 0.24,
-      Heavy_Cruiser_Battery_4: 0.24,
-      Heavy_Battery_1: 0.24,
-      Heavy_Battery_2: 0.24,
-      Heavy_Battery_3: 0.24,
-      Heavy_Battery_4: 0.24
+      Heavy_Cruiser_Battery_1: 0.24, Heavy_Cruiser_Battery_2: 0.24, Heavy_Cruiser_Battery_3: 0.24, Heavy_Cruiser_Battery_4: 0.24,
+      Heavy_Battery_1: 0.24, Heavy_Battery_2: 0.24, Heavy_Battery_3: 0.24, Heavy_Battery_4: 0.24
     }, // Woraround for CA and CL having different supply values
     manpower: {},
     carrier_size: {},
     lg_attack: {},
     lg_armor_piercing: {
-      Light_Battery_1: 1,
-      Light_Battery_2: 2,
-      Light_Battery_3: 2.5,
-      Light_Battery_4: 2.5,
-      DP_Light_Battery_1: 0.5,
-      DP_Light_Battery_2: 1,
-      DP_Light_Battery_3: 1.75,
-      DP_Light_Battery_4: 1.75,
-      Light_Cruiser_Battery_1: 5.5,
-      Light_Cruiser_Battery_2: 7,
-      Light_Cruiser_Battery_3: 8,
-      Light_Cruiser_Battery_4: 9,
+      Light_Battery_1: 1, Light_Battery_2: 2, Light_Battery_3: 2.5, Light_Battery_4: 2.5,
+      DP_Light_Battery_1: 0.5, DP_Light_Battery_2: 1, DP_Light_Battery_3: 1.75, DP_Light_Battery_4: 1.75,
+      Light_Cruiser_Battery_1: 5.5, Light_Cruiser_Battery_2: 7, Light_Cruiser_Battery_3: 8, Light_Cruiser_Battery_4: 9,
       DP_Light_Cruiser_Battery: 8,
-      Secondary_Battery_1: 5.5,
-      Secondary_Battery_2: 7,
-      DP_Secondary_Battery_1: 3,
-      DP_Secondary_Battery_2: 4,
-      DP_Secondary_Battery_3: 7,
-      DP_Secondary_Battery_4: 7
+      Secondary_Battery_1: 5.5, Secondary_Battery_2: 7,
+      DP_Secondary_Battery_1: 3, DP_Secondary_Battery_2: 4, DP_Secondary_Battery_3: 7, DP_Secondary_Battery_4: 7
     },
     hg_attack: {},
     hg_armor_piercing: {
-      Heavy_Cruiser_Battery_1: 22,
-      Heavy_Cruiser_Battery_2: 25,
-      Heavy_Cruiser_Battery_3: 29,
-      Heavy_Cruiser_Battery_4: 34,
-      Heavy_Battery_1: 31,
-      Heavy_Battery_2: 36,
-      Heavy_Battery_3: 40,
-      Heavy_Battery_4: 45,
+      Heavy_Cruiser_Battery_1: 22, Heavy_Cruiser_Battery_2: 25, Heavy_Cruiser_Battery_3: 29, Heavy_Cruiser_Battery_4: 34,
+      Heavy_Battery_1: 31, Heavy_Battery_2: 36, Heavy_Battery_3: 40, Heavy_Battery_4: 45,
       SH_Battery: 45
     },
     torpedo_attack: {},
@@ -650,489 +458,164 @@ class App extends Component {
   //Stat Percentage per equipment piece
   per = {
     naval_speed: {
-      Raiding_fleet_Designer: {
-        CV: 0.1,
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1,
-        SS: 0.1
-      },
-      Convoy_escort_fleet_Designer: {
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      },
-      Submarine_designer: { SS: 0.1 },
-      Improved_Submarine_designer: { SS: 0.15 },
-      Mediterranean_fleet_Designer: {
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      },
-      Light_Battery_1: -0.01,
-      Light_Battery_2: -0.02,
-      Light_Battery_3: -0.03,
-      Light_Battery_4: -0.04,
-      DP_Light_Battery_1: -0.01,
-      DP_Light_Battery_2: -0.02,
-      DP_Light_Battery_3: -0.03,
-      DP_Light_Battery_4: -0.04,
-      Light_Cruiser_Battery_1: -0.03,
-      Light_Cruiser_Battery_2: -0.04,
-      Light_Cruiser_Battery_3: -0.05,
-      Light_Cruiser_Battery_4: -0.06,
+      Raiding_fleet_Designer: { CV: 0.1, BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1, SS: 0.1 },
+      Convoy_escort_fleet_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Cockatoo_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Submarine_Designer: { SS: 0.1 },
+      Improved_Submarine_Designer: { SS: 0.15 },
+      Mediterranean_fleet_Designer: { BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1 },
+      Light_Battery_1: -0.01, Light_Battery_2: -0.02, Light_Battery_3: -0.03, Light_Battery_4: -0.04,
+      DP_Light_Battery_1: -0.01, DP_Light_Battery_2: -0.02, DP_Light_Battery_3: -0.03, DP_Light_Battery_4: -0.04,
+      Light_Cruiser_Battery_1: -0.03, Light_Cruiser_Battery_2: -0.04, Light_Cruiser_Battery_3: -0.05, Light_Cruiser_Battery_4: -0.06,
       DP_Light_Cruiser_Battery: -0.06,
-      Heavy_Cruiser_Battery_1: -0.04,
-      Heavy_Cruiser_Battery_2: -0.06,
-      Heavy_Cruiser_Battery_3: -0.07,
-      Heavy_Cruiser_Battery_4: -0.08,
-      Heavy_Battery_1: -0.05,
-      Heavy_Battery_2: -0.06,
-      Heavy_Battery_3: -0.07,
-      Heavy_Battery_4: -0.08,
+      Heavy_Cruiser_Battery_1: -0.04, Heavy_Cruiser_Battery_2: -0.06, Heavy_Cruiser_Battery_3: -0.07, Heavy_Cruiser_Battery_4: -0.08,
+      Heavy_Battery_1: -0.05, Heavy_Battery_2: -0.06, Heavy_Battery_3: -0.07, Heavy_Battery_4: -0.08,
       SH_Battery: -0.09,
-      Secondary_Battery_1: -0.02,
-      Secondary_Battery_2: -0.03,
-      DP_Secondary_Battery_1: -0.01,
-      DP_Secondary_Battery_2: -0.01,
-      DP_Secondary_Battery_3: -0.03,
-      DP_Secondary_Battery_4: -0.03,
-      Anti_Air_1: -0.005,
-      Anti_Air_2: -0.005,
-      Anti_Air_3: -0.005,
-      Anti_Air_4: -0.005,
-      Light_Engine_1: 0.2,
-      Light_Engine_2: 0.25,
-      Light_Engine_3: 0.3,
-      Light_Engine_4: 0.35,
-      Cruiser_Engine_1: 0.2,
-      Cruiser_Engine_2: 0.3,
-      Cruiser_Engine_3: 0.35,
-      Cruiser_Engine_4: 0.4,
-      Heavy_Engine_1: 0.2,
-      Heavy_Engine_2: 0.4,
-      Heavy_Engine_3: 0.5,
-      Heavy_Engine_4: 0.55,
-      Submarine_Engine_1: 0.05,
-      Submarine_Engine_2: 0.1,
-      Submarine_Engine_3: 0.15,
-      Submarine_Engine_4: 0.2,
-      Carrier_Engine_1: 0.3,
-      Carrier_Engine_2: 0.4,
-      Carrier_Engine_3: 0.5,
-      Carrier_Engine_4: 0.55,
-      Torpedo_Launcher_1: -0.01,
-      Torpedo_Launcher_2: -0.02,
-      Torpedo_Launcher_3: -0.03,
-      Torpedo_Launcher_4: -0.04,
-      Torpedo_Tubes_1: -0.01,
-      Torpedo_Tubes_2: -0.02,
-      Torpedo_Tubes_3: -0.03,
-      Torpedo_Tubes_4: -0.04,
+      Secondary_Battery_1: -0.02, Secondary_Battery_2: -0.03,
+      DP_Secondary_Battery_1: -0.01, DP_Secondary_Battery_2: -0.01, DP_Secondary_Battery_3: -0.03, DP_Secondary_Battery_4: -0.03,
+      Anti_Air_1: -0.005, Anti_Air_2: -0.005, Anti_Air_3: -0.005, Anti_Air_4: -0.005,
+      Light_Engine_1: 0.2, Light_Engine_2: 0.25, Light_Engine_3: 0.3, Light_Engine_4: 0.35,
+      Cruiser_Engine_1: 0.2, Cruiser_Engine_2: 0.3, Cruiser_Engine_3: 0.35, Cruiser_Engine_4: 0.4,
+      Heavy_Engine_1: 0.2, Heavy_Engine_2: 0.4, Heavy_Engine_3: 0.5, Heavy_Engine_4: 0.55,
+      Submarine_Engine_1: 0.05, Submarine_Engine_2: 0.1, Submarine_Engine_3: 0.15, Submarine_Engine_4: 0.2,
+      Carrier_Engine_1: 0.3, Carrier_Engine_2: 0.4, Carrier_Engine_3: 0.5, Carrier_Engine_4: 0.55,
+      Torpedo_Launcher_1: -0.01, Torpedo_Launcher_2: -0.02, Torpedo_Launcher_3: -0.03, Torpedo_Launcher_4: -0.04,
+      Torpedo_Tubes_1: -0.01, Torpedo_Tubes_2: -0.02, Torpedo_Tubes_3: -0.03, Torpedo_Tubes_4: -0.04,
       Minelaying_Rails: -0.02,
       Minesweeping_Gears: -0.02,
-      Depth_Charge_1: -0.01,
-      Depth_Charge_2: -0.01,
-      Depth_Charge_3: -0.02,
-      Depth_Charge_4: -0.02,
-      Floatplane_Catapult_1: -0.01,
-      Floatplane_Catapult_2: -0.01,
+      Depth_Charge_1: -0.01, Depth_Charge_2: -0.01, Depth_Charge_3: -0.02, Depth_Charge_4: -0.02,
+      Floatplane_Catapult_1: -0.01, Floatplane_Catapult_2: -0.01,
       Hangar_Space: -0.05,
-      Cruiser_Armor_1: -0.05,
-      Cruiser_Armor_2: -0.075,
-      Cruiser_Armor_3: -0.1,
-      Cruiser_Armor_4: -0.125,
-      Battlecruiser_Armor_1: -0.15,
-      Battlecruiser_Armor_2: -0.2,
-      Battlecruiser_Armor_3: -0.25,
-      Battleship_Armor_1: -0.3,
-      Battleship_Armor_2: -0.3,
-      Battleship_Armor_3: -0.3,
+      Cruiser_Armor_1: -0.05, Cruiser_Armor_2: -0.075, Cruiser_Armor_3: -0.1, Cruiser_Armor_4: -0.125,
+      Battlecruiser_Armor_1: -0.15, Battlecruiser_Armor_2: -0.2, Battlecruiser_Armor_3: -0.25,
+      Battleship_Armor_1: -0.3, Battleship_Armor_2: -0.3, Battleship_Armor_3: -0.3,
       SH_Armor: -0.35,
       Carrier_Armor: -0.05
     },
     naval_range: {
-      Pacific_fleet_Designer: {
-        CV: 0.25,
-        BB: 0.25,
-        BC: 0.25,
-        CA: 0.25,
-        CL: 0.25,
-        DD: 0.25,
-        SS: 0.25
-      },
-      Convoy_escort_fleet_Designer: {
-        CA: 0.3,
-        CL: 0.3,
-        DD: 0.3
-      },
-      Coastal_defence_fleet_Designer: {
-        CV: -0.5,
-        BB: -0.5,
-        BC: -0.5,
-        CA: -0.5,
-        CL: -0.5,
-        DD: -0.5,
-        SS: -0.5
-      },
-      Submarine_designer: { SS: 0.1 },
-      Improved_Submarine_designer: { SS: 0.1 },
-      Mediterranean_fleet_Designer: {
-        BB: -0.25,
-        BC: -0.25,
-        CA: -0.25,
-        CL: -0.25,
-        DD: -0.25
-      },
-      Black_sea_naval_Manufacturer: {
-        CV: -0.25,
-        CA: -0.25,
-        CL: -0.25,
-        DD: -0.25,
-        SS: -0.25
-      },
-      Romanian_coastal_defence_fleet_Designer: {
-        CA: -0.5,
-        CL: -0.5,
-        DD: -0.5
-      },
-      Romanian_Black_Sea_dominance_Designer: {
-        BB: -0.5,
-        BC: -0.5,
-        CA: -0.5,
-        CL: -0.5
-      }
+      Pacific_fleet_Designer: { CV: 0.25, BB: 0.25, BC: 0.25, CA: 0.25, CL: 0.25, DD: 0.25, SS: 0.25 },
+      Evans_deakin_Designer: { CV: 0.25, BB: 0.25, BC: 0.25, CA: 0.25, CL: 0.25, DD: 0.25, SS: 0.25 },
+      Convoy_escort_fleet_Designer: { CA: 0.3, CL: 0.3, DD: 0.3 },
+      Cockatoo_Designer: { CA: 0.3, CL: 0.3, DD: 0.3 },
+      Coastal_defence_fleet_Designer: { CV: -0.5, BB: -0.5, BC: -0.5, CA: -0.5, CL: -0.5, DD: -0.5, SS: -0.5 },
+      Submarine_Designer: { SS: 0.1 },
+      Improved_Submarine_Designer: { SS: 0.1 },
+      Mediterranean_fleet_Designer: { BB: -0.25, BC: -0.25, CA: -0.25, CL: -0.25, DD: -0.25 },
+      Black_sea_naval_Manufacturer: { CV: -0.25, CA: -0.25, CL: -0.25, DD: -0.25, SS: -0.25 },
+      Romanian_coastal_defence_fleet_Designer: { CA: -0.5, CL: -0.5, DD: -0.5 },
+      Romanian_Black_Sea_dominance_Designer: { BB: -0.5, BC: -0.5, CA: -0.5, CL: -0.5 }
     },
     max_organisation: {},
     max_strength: {
       Trade_Interdiction_Doctrine: { SS: 0.2 },
       Atlantic_fleet_Designer: { CV: 0.1 },
-      Heavy_Cruiser_Battery_1: 0.4,
-      Heavy_Cruiser_Battery_2: 0.4,
-      Heavy_Cruiser_Battery_3: 0.4,
-      Heavy_Cruiser_Battery_4: 0.4,
-      Cruiser_Armor_2: 0.05,
-      Cruiser_Armor_3: 0.1,
-      Cruiser_Armor_4: 0.15,
-      Battlecruiser_Armor_1: 0.05,
-      Battlecruiser_Armor_2: 0.1,
-      Battlecruiser_Armor_3: 0.15,
-      Battleship_Armor_1: 0.05,
-      Battleship_Armor_2: 0.1,
-      Battleship_Armor_3: 0.15,
+      Heavy_Cruiser_Battery_1: 0.4, Heavy_Cruiser_Battery_2: 0.4, Heavy_Cruiser_Battery_3: 0.4, Heavy_Cruiser_Battery_4: 0.4,
+      Cruiser_Armor_2: 0.05, Cruiser_Armor_3: 0.1, Cruiser_Armor_4: 0.15,
+      Battlecruiser_Armor_1: 0.05, Battlecruiser_Armor_2: 0.1, Battlecruiser_Armor_3: 0.15,
+      Battleship_Armor_1: 0.05, Battleship_Armor_2: 0.1, Battleship_Armor_3: 0.15,
       SH_Armor: 0.1
     },
     reliability: {},
     supply_consumption: {
-      Battlecruiser_Armor_1: -0.4,
-      Battlecruiser_Armor_2: -0.4,
-      Battlecruiser_Armor_3: -0.4
+      Battlecruiser_Armor_1: -0.4, Battlecruiser_Armor_2: -0.4, Battlecruiser_Armor_3: -0.4
     }, // Woraround for BB and BC having different supply values
     manpower: {},
     carrier_size: {},
     lg_attack: {
-      Romanian_coastal_defence_fleet_Designer: {
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      },
-      Light_shell_1: {
-        CV: 0.05,
-        BB: 0.05,
-        BC: 0.05,
-        CA: 0.05,
-        CL: 0.05,
-        DD: 0.05
-      },
-      Light_shell_2: {
-        CV: 0.05,
-        BB: 0.05,
-        BC: 0.05,
-        CA: 0.05,
-        CL: 0.05,
-        DD: 0.05
-      },
+      Romanian_coastal_defence_fleet_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Light_shell_1: { CV: 0.05, BB: 0.05, BC: 0.05, CA: 0.05, CL: 0.05, DD: 0.05 },
+      Light_shell_2: { CV: 0.05, BB: 0.05, BC: 0.05, CA: 0.05, CL: 0.05, DD: 0.05 },
       Medium_shell_1: { CL: 0.05 },
       Medium_shell_2: { CL: 0.05 },
-      Fire_control_methods_1: {
-        BB: 0.05,
-        BC: 0.05
-      },
-      Fire_control_methods_2: {
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.05
-      },
-      Fire_control_methods_3: {
-        BB: 0.15,
-        BC: 0.15,
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.05
-      }
+      Fire_control_methods_1: { BB: 0.05, BC: 0.05 },
+      Fire_control_methods_2: { BB: 0.1, BC: 0.1, CA: 0.05 },
+      Fire_control_methods_3: { BB: 0.15, BC: 0.15, CA: 0.1, CL: 0.1, DD: 0.05 }
     },
     lg_armor_piercing: {
-      Light_shell_1: {
-        CV: 0.05,
-        BB: 0.05,
-        BC: 0.05,
-        CA: 0.05,
-        CL: 0.05,
-        DD: 0.05
-      },
-      Light_shell_2: {
-        CV: 0.05,
-        BB: 0.05,
-        BC: 0.05,
-        CA: 0.05,
-        CL: 0.05,
-        DD: 0.05
-      },
+      Light_shell_1: { CV: 0.05, BB: 0.05, BC: 0.05, CA: 0.05, CL: 0.05, DD: 0.05 },
+      Light_shell_2: { CV: 0.05, BB: 0.05, BC: 0.05, CA: 0.05, CL: 0.05, DD: 0.05 },
       Medium_shell_1: { CL: 0.05 },
       Medium_shell_2: { CL: 0.05 }
     },
     hg_attack: {
-      Atlantic_fleet_Designer: {
-        BB: 0.1,
-        BC: 0.1
-      },
-      Battlefleet_Designer: {
-        BB: 0.15,
-        BC: 0.15
-      },
-      Raiding_fleet_Designer: {
-        BB: -0.1,
-        BC: -0.1
-      },
-      Coastal_defence_fleet_Designer: {
-        BB: -0.2,
-        BC: -0.2
-      },
-      Romanian_Black_Sea_dominance_Designer: {
-        BB: 0.2,
-        BC: 0.2,
-        CA: 0.2
-      },
+      Atlantic_fleet_Designer: { BB: 0.1, BC: 0.1 },
+      Battlefleet_Designer: { BB: 0.15, BC: 0.15 },
+      Raiding_fleet_Designer: { BB: -0.1, BC: -0.1 },
+      Coastal_defence_fleet_Designer: { BB: -0.2, BC: -0.2 },
+      Romanian_Black_Sea_dominance_Designer: { BB: 0.2, BC: 0.2, CA: 0.2 },
       Medium_shell_1: { CA: 0.05 },
       Medium_shell_2: { CA: 0.05 },
-      Heavy_shell_1: {
-        BB: 0.05,
-        BC: 0.05
-      },
-      Heavy_shell_2: {
-        BB: 0.05,
-        BC: 0.05
-      },
-      Fire_control_methods_1: {
-        BB: 0.05,
-        BC: 0.05
-      },
-      Fire_control_methods_2: {
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.05
-      },
-      Fire_control_methods_3: {
-        BB: 0.15,
-        BC: 0.15,
-        CA: 0.1
-      }
+      Heavy_shell_1: { BB: 0.05, BC: 0.05 },
+      Heavy_shell_2: { BB: 0.05, BC: 0.05 },
+      Fire_control_methods_1: { BB: 0.05, BC: 0.05 },
+      Fire_control_methods_2: { BB: 0.1, BC: 0.1, CA: 0.05 },
+      Fire_control_methods_3: { BB: 0.15, BC: 0.15, CA: 0.1 }
     },
     hg_armor_piercing: {
       Medium_shell_1: { CA: 0.05 },
       Medium_shell_2: { CA: 0.05 },
-      Heavy_shell_1: {
-        BB: 0.05,
-        BC: 0.05
-      },
-      Heavy_shell_2: {
-        BB: 0.05,
-        BC: 0.05
-      },
+      Heavy_shell_1: { BB: 0.05, BC: 0.05 },
+      Heavy_shell_2: { BB: 0.05, BC: 0.05 },
     },
     torpedo_attack: {
-      Battlefleet_Designer: {
-        CA: 0.25,
-        CL: 0.25,
-        DD: 0.25
-      },
-      Torpedo_1: {
-        CA: 0.2,
-        CL: 0.2,
-        DD: 0.2,
-        SS: 0.2
-      }
+      Battlefleet_Designer: { CA: 0.25, CL: 0.25, DD: 0.25 },
+      Torpedo_1: { CA: 0.2, CL: 0.2, DD: 0.2, SS: 0.2 }
     },
     sub_attack: {},
     armor_value: {
       Pacific_fleet_Designer: { CV: -0.15 },
-      Atlantic_fleet_Designer: {
-        CV: 0.5,
-        BB: 0.1,
-        BC: 0.1
-      },
-      Battlefleet_Designer: {
-        BB: 0.15,
-        BC: 0.15
-      },
-      Coastal_defence_fleet_Designer: {
-        BB: -0.2,
-        BC: -0.2
-      },
-      Romanian_Black_Sea_dominance_Designer: {
-        BB: 0.2,
-        BC: 0.2,
-        CA: 0.2,
-        CL: 0.2
-      }
+      Atlantic_fleet_Designer: { CV: 0.5, BB: 0.1, BC: 0.1 },
+      Battlefleet_Designer: { BB: 0.15, BC: 0.15 },
+      Coastal_defence_fleet_Designer: { BB: -0.2, BC: -0.2 },
+      Romanian_Black_Sea_dominance_Designer: { BB: 0.2, BC: 0.2, CA: 0.2, CL: 0.2 }
     },
     anti_air_attack: {
-      Fire_Control_1: 0.1,
-      Fire_Control_2: 0.15,
-      Fire_Control_3: 0.2,
-      Radar_2: 0.05,
-      Radar_3: 0.075,
-      Radar_4: 0.1
+      Fire_Control_1: 0.1, Fire_Control_2: 0.15, Fire_Control_3: 0.2,
+      Radar_2: 0.05, Radar_3: 0.075, Radar_4: 0.1
     },
     fuel_consumption: {},
     surface_visibility: {
-      Raiding_fleet_Designer: {
-        CV: -0.1,
-        BB: -0.1,
-        BC: -0.1,
-        CA: -0.1,
-        CL: -0.1,
-        DD: -0.1,
-        SS: -0.1
-      },
-      Submarine_designer: { SS: -0.1 },
-      Improved_Submarine_designer: { SS: -0.1 }
+      Raiding_fleet_Designer: { CV: -0.1, BB: -0.1, BC: -0.1, CA: -0.1, CL: -0.1, DD: -0.1, SS: -0.1 },
+      Submarine_Designer: { SS: -0.1 },
+      Improved_Submarine_Designer: { SS: -0.1 }
     },
     surface_detection: {
-      Fleet_in_Being_Doctrine: {
-        CL: 0.1,
-        DD: 0.1,
-        SS: 0.25
-      },
-      Trade_Interdiction_Doctrine: {
-        BB: 0.25,
-        BC: 0.3,
-        CA: 0.3,
-        CL: 0.3,
-        SS: 0.5
-      },
+      Fleet_in_Being_Doctrine: { CL: 0.1, DD: 0.1, SS: 0.25 },
+      Trade_Interdiction_Doctrine: { BB: 0.25, BC: 0.3, CA: 0.3, CL: 0.3, SS: 0.5 },
       Base_Strike_Doctrine: { SS: 0.25 }
     },
     sub_visibility: {
       Raiding_fleet_Designer: { SS: -0.1 },
       Black_sea_naval_Manufacturer: { SS: -0.1 },
-      Submarine_designer: { SS: -0.1 },
-      Improved_Submarine_designer: { SS: -0.1 },
-      Submarine_Engine_2: -0.05,
-      Submarine_Engine_3: -0.1,
-      Submarine_Engine_4: -0.15,
-      Snorkel_1: -0.1,
-      Snorkel_2: -0.2
+      Submarine_Designer: { SS: -0.1 },
+      Improved_Submarine_Designer: { SS: -0.1 },
+      Submarine_Engine_2: -0.05, Submarine_Engine_3: -0.1, Submarine_Engine_4: -0.15,
+      Snorkel_1: -0.1, Snorkel_2: -0.2
     },
     sub_detection: {
-      Fleet_in_Being_Doctrine: {
-        CV: 0.5,
-        CL: 0.35,
-        DD: 0.3
-      },
+      Fleet_in_Being_Doctrine: { CV: 0.5, CL: 0.35, DD: 0.3 },
       Trade_Interdiction_Doctrine: { DD: 0.05 },
-      Base_Strike_Doctrine: {
-        CV: 0.25,
-        CL: 0.25,
-        DD: 0.25
-      },
-      Battlefleet_Designer: {
-        CA: -0.25,
-        CL: -0.25,
-        DD: -0.25
-      },
-      Convoy_escort_fleet_Designer: {
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      },
-      Black_sea_naval_Manufacturer: {
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      }
+      Base_Strike_Doctrine: { CV: 0.25, CL: 0.25, DD: 0.25 },
+      Battlefleet_Designer: { CA: -0.25, CL: -0.25, DD: -0.25 },
+      Convoy_escort_fleet_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Cockatoo_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Black_sea_naval_Manufacturer: { CA: 0.1, CL: 0.1, DD: 0.1 }
     },
     mines_planting: { Mines_1: { SS: 0.2 } },
     mines_sweeping: {},
     build_cost_ic: {
-      Submarine_designer: {
-        CV: 0.1,
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1,
-        SS: -0.1
-      },
-      Improved_Submarine_designer: {
-        CV: 0.1,
-        BB: 0.1,
-        BC: 0.1,
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1,
-        SS: -0.15
-      },
-      Convoy_escort_fleet_Designer: {
-        CA: 0.1,
-        CL: 0.1,
-        DD: 0.1
-      },
-      Coastal_defence_fleet_Designer: {
-        CV: -0.25,
-        BB: -0.25,
-        BC: -0.25,
-        CA: -0.25,
-        CL: -0.25,
-        DD: -0.25,
-        SS: -0.25
-      },
-      Black_sea_naval_Manufacturer: {
-        CV: 0.15,
-        CA: -0.15,
-        CL: -0.15,
-        DD: -0.15,
-        SS: -0.15
-      },
-      Repair_and_refurbishment_Plant: {
-        CV: -0.05,
-        BB: -0.05,
-        BC: -0.05,
-        CA: -0.05,
-        CL: -0.05,
-        DD: -0.05,
-        SS: -0.05
-      },
-      Romanian_coastal_defence_fleet_Designer: {
-        CA: -0.2,
-        CL: -0.2,
-        DD: -0.2
-      },
+      Submarine_Designer: { CV: 0.1, BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1, SS: -0.1 },
+      Improved_Submarine_Designer: { CV: 0.1, BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1, SS: -0.15 },
+      Evans_deakin_Designer: { DD: -0.1 },
+      Convoy_escort_fleet_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
+      Coastal_defence_fleet_Designer: { CV: -0.25, BB: -0.25, BC: -0.25, CA: -0.25, CL: -0.25, DD: -0.25, SS: -0.25 },
+      Black_sea_naval_Manufacturer: { CV: 0.15, CA: -0.15, CL: -0.15, DD: -0.15, SS: -0.15 },
+      Repair_and_refurbishment_Plant: { CV: -0.05, BB: -0.05, BC: -0.05, CA: -0.05, CL: -0.05, DD: -0.05, SS: -0.05 },
+      Romanian_coastal_defence_fleet_Designer: { CA: -0.2, CL: -0.2, DD: -0.2 },
       Extra_Fuel_Tank: 0.05,
-      Cruiser_Armor_1: 0.1,
-      Cruiser_Armor_2: 0.15,
-      Cruiser_Armor_3: 0.2,
-      Cruiser_Armor_4: 0.25,
-      Battlecruiser_Armor_1: 0.1,
-      Battlecruiser_Armor_2: 0.125,
-      Battlecruiser_Armor_3: 0.125,
-      Battleship_Armor_1: 0.125,
-      Battleship_Armor_2: 0.15,
-      Battleship_Armor_3: 0.175,
+      Cruiser_Armor_1: 0.1, Cruiser_Armor_2: 0.15, Cruiser_Armor_3: 0.2, Cruiser_Armor_4: 0.25,
+      Battlecruiser_Armor_1: 0.1, Battlecruiser_Armor_2: 0.125, Battlecruiser_Armor_3: 0.125,
+      Battleship_Armor_1: 0.125, Battleship_Armor_2: 0.15, Battleship_Armor_3: 0.175,
       SH_Armor: 0.25,
       Carrier_Armor: 0.1
     },
@@ -1557,82 +1040,32 @@ class App extends Component {
 
     // Writes all the values into the html for the user to see
 
-    document.getElementById("naval_speed").innerHTML = funcKn(
-      finalstat["naval_speed"]
-    );
-    document.getElementById("naval_range").innerHTML = funcKm(
-      finalstat["naval_range"]
-    );
-    document.getElementById("max_organisation").innerHTML = funcTw(
-      finalstat["max_organisation"]
-    );
-    document.getElementById("max_strength").innerHTML = funcTw(
-      finalstat["max_strength"]
-    );
-    document.getElementById("reliability").innerHTML = funcPe(
-      finalstat["reliability"]
-    );
-    document.getElementById("supply_consumption").innerHTML = funcTh(
-      finalstat["supply_consumption"]
-    );
-    document.getElementById("manpower").innerHTML = funcNo(
-      finalstat["manpower"]
-    );
-    document.getElementById("carrier_size").innerHTML = funcNo(
-      finalstat["carrier_size"]
-    );
-    document.getElementById("lg_attack").innerHTML = funcTw(
-      finalstat["lg_attack"]
-    );
-    document.getElementById("lg_armor_piercing").innerHTML = funcTw(
-      finalstat["lg_armor_piercing"]
-    );
-    document.getElementById("hg_attack").innerHTML = funcTw(
-      finalstat["hg_attack"]
-    );
-    document.getElementById("hg_armor_piercing").innerHTML = funcTw(
-      finalstat["hg_armor_piercing"]
-    );
-    document.getElementById("torpedo_attack").innerHTML = funcTw(
-      finalstat["torpedo_attack"]
-    );
-    document.getElementById("sub_attack").innerHTML = funcTw(
-      finalstat["sub_attack"]
-    );
-    document.getElementById("armor_value").innerHTML = funcTw(
-      finalstat["armor_value"]
-    );
-    document.getElementById("anti_air_attack").innerHTML = funcTw(
-      finalstat["anti_air_attack"]
-    );
-    document.getElementById("fuel_consumption").innerHTML = funcTw(
-      finalstat["fuel_consumption"]
-    );
-    document.getElementById("surface_visibility").innerHTML = funcTw(
-      finalstat["surface_visibility"]
-    );
-    document.getElementById("surface_detection").innerHTML = funcTw(
-      finalstat["surface_detection"]
-    );
-    document.getElementById("sub_visibility").innerHTML = funcTw(
-      finalstat["sub_visibility"]
-    );
-    document.getElementById("sub_detection").innerHTML = funcTw(
-      finalstat["sub_detection"]
-    );
-    document.getElementById("mines_planting").innerHTML = funcTh(
-      finalstat["mines_planting"]
-    );
-    document.getElementById("mines_sweeping").innerHTML = funcTh(
-      finalstat["mines_sweeping"]
-    );
-    document.getElementById("build_cost_ic").innerHTML = funcNo(
-      finalstat["build_cost_ic"]
-    );
+    document.getElementById("naval_speed").innerHTML = funcKn(finalstat["naval_speed"]);
+    document.getElementById("naval_range").innerHTML = funcKm(finalstat["naval_range"]);
+    document.getElementById("max_organisation").innerHTML = funcTw(finalstat["max_organisation"]);
+    document.getElementById("max_strength").innerHTML = funcTw(finalstat["max_strength"]);
+    document.getElementById("reliability").innerHTML = funcPe(finalstat["reliability"]);
+    document.getElementById("supply_consumption").innerHTML = funcTh(finalstat["supply_consumption"]);
+    document.getElementById("manpower").innerHTML = funcNo(finalstat["manpower"]);
+    document.getElementById("carrier_size").innerHTML = funcNo(finalstat["carrier_size"]);
+    document.getElementById("lg_attack").innerHTML = funcTw(finalstat["lg_attack"]);
+    document.getElementById("lg_armor_piercing").innerHTML = funcTw(finalstat["lg_armor_piercing"]);
+    document.getElementById("hg_attack").innerHTML = funcTw(finalstat["hg_attack"]);
+    document.getElementById("hg_armor_piercing").innerHTML = funcTw(finalstat["hg_armor_piercing"]);
+    document.getElementById("torpedo_attack").innerHTML = funcTw(finalstat["torpedo_attack"]);
+    document.getElementById("sub_attack").innerHTML = funcTw(finalstat["sub_attack"]);
+    document.getElementById("armor_value").innerHTML = funcTw(finalstat["armor_value"]);
+    document.getElementById("anti_air_attack").innerHTML = funcTw(finalstat["anti_air_attack"]);
+    document.getElementById("fuel_consumption").innerHTML = funcTw(finalstat["fuel_consumption"]);
+    document.getElementById("surface_visibility").innerHTML = funcTw(finalstat["surface_visibility"]);
+    document.getElementById("surface_detection").innerHTML = funcTw(finalstat["surface_detection"]);
+    document.getElementById("sub_visibility").innerHTML = funcTw(finalstat["sub_visibility"]);
+    document.getElementById("sub_detection").innerHTML = funcTw(finalstat["sub_detection"]);
+    document.getElementById("mines_planting").innerHTML = funcTh(finalstat["mines_planting"]);
+    document.getElementById("mines_sweeping").innerHTML = funcTh(finalstat["mines_sweeping"]);
+    document.getElementById("build_cost_ic").innerHTML = funcNo(finalstat["build_cost_ic"]);
     document.getElementById("steel").innerHTML = funcNo(finalstat["steel"]);
-    document.getElementById("chromium").innerHTML = funcNo(
-      finalstat["chromium"]
-    );
+    document.getElementById("chromium").innerHTML = funcNo(finalstat["chromium"]);
 
     if (cla == "CA" || cla == "BB" || cla == "BC" || cla == "CV") {
       document.getElementById("isCapital").innerHTML =
@@ -1803,7 +1236,7 @@ class App extends Component {
         <div class="title">
           <br />
           <p id="title1">Naval calculator</p>
-          <p id="title2">Hearts of Iron IV 1.12.6</p>
+          <p id="title2">Hearts of Iron IV 1.12.7</p>
           <br />
         </div>
         <br />
@@ -1870,15 +1303,17 @@ class App extends Component {
                             <option value="Battlefleet_Designer">Battlefleet designer</option>
                             <option value="Black_sea_naval_Manufacturer">Black sea naval designer</option>
                             <option value="Coastal_defence_fleet_Designer">Coastal defence fleet designer</option>
+                            <option value="Cockatoo_Designer">Cockatoo docks</option>
                             <option value="Convoy_escort_fleet_Designer">Convoy escort fleet designer</option>
-                            <option value="Submarine_designer">Submarine designer</option>
-                            <option value="Improved_Submarine_designer">Improved submarine designer</option>
+                            <option value="Evans_deakin_Designer">Evans Deakin & company</option>
                             <option value="Mediterranean_fleet_Designer">Mediterranean fleet designer</option>
                             <option value="Pacific_fleet_Designer">Pacific fleet designer</option>
                             <option value="Raiding_fleet_Designer">Raiding fleet designer</option>
                             <option value="Repair_and_refurbishment_Plant">Repair-refurbishment Plant</option>
                             <option value="Romanian_Black_Sea_dominance_Designer">Braila shipyards</option>
                             <option value="Romanian_coastal_defence_fleet_Designer">Galati shipyard</option>
+                            <option value="Submarine_Designer">Submarine designer</option>
+                            <option value="Improved_Submarine_Designer">Improved submarine designer</option>
                           </select>
                         </p>
                         <p class="tech_names">
@@ -4112,7 +3547,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -4234,7 +3669,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -4366,7 +3801,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -4516,7 +3951,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -4676,7 +4111,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -4842,7 +4277,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -5581,7 +5016,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -5677,7 +5112,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -5773,7 +5208,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -5871,7 +5306,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
@@ -5977,7 +5412,7 @@ class App extends Component {
             <label id="isCapital">
               <img
                 class="capital"
-                src="https://i12.servimg.com/u/f12/19/44/96/17/notcap10.png"
+                src="https://i12.servimg.com/u/f12/19/44/96/17/capita10.png"
               />
             </label>
           </div>
