@@ -65,11 +65,11 @@ class App extends Component {
 
   //Base stats table per hull in hull index order. Refer to the above commentary for hull index, or to the return() function if said commentary is not up-to-date
   naval_speed = [
-    30, 30, 30, 30,
+    32, 32, 32, 32,
     20, 27, 30, 32, 33, 30, 23,
-    18, 30, 30, 30, 30, 32,
+    18, 20, 24, 25, 26, 24,
     13, 17, 18, 18, 16, 8.3,
-    22, 24, 26, 26, 26
+    22.5, 25, 26, 26, 26
   ];
 
   naval_range = [
@@ -252,8 +252,8 @@ class App extends Component {
     400, 500, 550, 600,
     3500, 1800, 1900, 2000, 2100, 1700, 3500,
     2600, 2800, 3000, 3200, 3400, 5500,
-    220, 250, 320, 450, 390, 100,
-    2700, 2700, 2450, 2600, 3250
+    320, 350, 420, 550, 490, 150,
+    2700, 2700, 2094, 2600, 3250
   ];
 
   steel = [
@@ -336,10 +336,7 @@ class App extends Component {
       Submarine_Engine_1: 7, Submarine_Engine_2: 8, Submarine_Engine_3: 10, Submarine_Engine_4: 10,
       Carrier_Engine_1: 12, Carrier_Engine_2: 16, Carrier_Engine_3: 20, Carrier_Engine_4: 24
     },
-    surface_visibility: {
-      Heavy_Cruiser_Battery_1: 3.5, Heavy_Cruiser_Battery_2: 3.5, Heavy_Cruiser_Battery_3: 3.5, Heavy_Cruiser_Battery_4: 3.5,
-      SH_Armor: 10
-    },
+    surface_visibility: {},
     surface_detection: {
       Radar_1: 5, Radar_2: 7, Radar_3: 12, Radar_4: 18,
       Floatplane_Catapult_1: 7, Floatplane_Catapult_2: 10
@@ -361,19 +358,14 @@ class App extends Component {
       DP_Light_Battery_1: 100, DP_Light_Battery_2: 130, DP_Light_Battery_3: 160, DP_Light_Battery_4: 185,
       Light_Cruiser_Battery_1: 300, Light_Cruiser_Battery_2: 350, Light_Cruiser_Battery_3: 375, Light_Cruiser_Battery_4: 425,
       DP_Light_Cruiser_Battery: 450,
-      Heavy_Cruiser_Battery_1: 750, Heavy_Cruiser_Battery_2: 800, Heavy_Cruiser_Battery_3: 825, Heavy_Cruiser_Battery_4: 900,
-      Heavy_Battery_1: 1250, Heavy_Battery_2: 1350, Heavy_Battery_3: 1450, Heavy_Battery_4: 1550,
-      SH_Battery: 1700,
+      Heavy_Cruiser_Battery_1: 650, Heavy_Cruiser_Battery_2: 700, Heavy_Cruiser_Battery_3: 725, Heavy_Cruiser_Battery_4: 800,
+      Heavy_Battery_1: 1550, Heavy_Battery_2: 1650, Heavy_Battery_3: 1750, Heavy_Battery_4: 1850,
+      SH_Battery: 2000,
       Secondary_Battery_1: 180, Secondary_Battery_2: 240,
-      DP_Secondary_Battery_1: 180, DP_Secondary_Battery_2: 200, DP_Secondary_Battery_3: 240, DP_Secondary_Battery_4: 290,
+      DP_Secondary_Battery_1: 180, DP_Secondary_Battery_2: 240, DP_Secondary_Battery_3: 300, DP_Secondary_Battery_4: 360,
       Anti_Air_1: 80, Anti_Air_2: 110, Anti_Air_3: 140, Anti_Air_4: 170,
       Fire_Control_0: 60, Fire_Control_1: 135, Fire_Control_2: 165, Fire_Control_3: 225,
       Radar_1: 100, Radar_2: 130, Radar_3: 160, Radar_4: 190,
-      Light_Engine_1: 90, Light_Engine_2: 120, Light_Engine_3: 150, Light_Engine_4: 170,
-      Cruiser_Engine_1: 400, Cruiser_Engine_2: 480, Cruiser_Engine_3: 550, Cruiser_Engine_4: 670,
-      Heavy_Engine_1: 1800, Heavy_Engine_2: 2200, Heavy_Engine_3: 2800, Heavy_Engine_4: 3200,
-      Submarine_Engine_1: 90, Submarine_Engine_2: 120, Submarine_Engine_3: 150, Submarine_Engine_4: 170,
-      Carrier_Engine_1: 400, Carrier_Engine_2: 480, Carrier_Engine_3: 550, Carrier_Engine_4: 670,
       Torpedo_Launcher_1: 90, Torpedo_Launcher_2: 120, Torpedo_Launcher_3: 150, Torpedo_Launcher_4: 180,
       Torpedo_Tubes_1: 80, Torpedo_Tubes_2: 100, Torpedo_Tubes_3: 120, Torpedo_Tubes_4: 140,
       Minelaying_Rails: 90,
@@ -382,7 +374,7 @@ class App extends Component {
       Depth_Charge_1: 90, Depth_Charge_2: 120, Depth_Charge_3: 150, Depth_Charge_4: 180,
       Snorkel_1: 50, Snorkel_2: 70,
       Floatplane_Catapult_1: 150, Floatplane_Catapult_2: 170,
-      Hangar_Space: 1750,
+      Hangar_Space: 1500,
       Sonar_1: 40, Sonar_2: 60
     },
     steel: {
@@ -470,15 +462,15 @@ class App extends Component {
       DP_Light_Cruiser_Battery: -0.06,
       Heavy_Cruiser_Battery_1: -0.04, Heavy_Cruiser_Battery_2: -0.06, Heavy_Cruiser_Battery_3: -0.07, Heavy_Cruiser_Battery_4: -0.08,
       Heavy_Battery_1: -0.05, Heavy_Battery_2: -0.06, Heavy_Battery_3: -0.07, Heavy_Battery_4: -0.08,
-      SH_Battery: -0.09,
+      SH_Battery: -0.08,
       Secondary_Battery_1: -0.02, Secondary_Battery_2: -0.03,
       DP_Secondary_Battery_1: -0.01, DP_Secondary_Battery_2: -0.01, DP_Secondary_Battery_3: -0.03, DP_Secondary_Battery_4: -0.03,
       Anti_Air_1: -0.005, Anti_Air_2: -0.005, Anti_Air_3: -0.005, Anti_Air_4: -0.005,
-      Light_Engine_1: 0.2, Light_Engine_2: 0.25, Light_Engine_3: 0.3, Light_Engine_4: 0.35,
+      Light_Engine_1: 0.1, Light_Engine_2: 0.15, Light_Engine_3: 0.2, Light_Engine_4: 0.25,
       Cruiser_Engine_1: 0.2, Cruiser_Engine_2: 0.3, Cruiser_Engine_3: 0.35, Cruiser_Engine_4: 0.4,
-      Heavy_Engine_1: 0.2, Heavy_Engine_2: 0.4, Heavy_Engine_3: 0.5, Heavy_Engine_4: 0.55,
-      Submarine_Engine_1: 0.05, Submarine_Engine_2: 0.1, Submarine_Engine_3: 0.15, Submarine_Engine_4: 0.2,
-      Carrier_Engine_1: 0.3, Carrier_Engine_2: 0.4, Carrier_Engine_3: 0.5, Carrier_Engine_4: 0.55,
+      Heavy_Engine_1: 0.2, Heavy_Engine_2: 0.35, Heavy_Engine_3: 0.45, Heavy_Engine_4: 0.55,
+      Submarine_Engine_1: 0.1, Submarine_Engine_2: 0.1, Submarine_Engine_3: 0.15, Submarine_Engine_4: 0.2,
+      Carrier_Engine_1: 0.3, Carrier_Engine_2: 0.4, Carrier_Engine_3: 0.5, Carrier_Engine_4: 0.6,
       Torpedo_Launcher_1: -0.01, Torpedo_Launcher_2: -0.02, Torpedo_Launcher_3: -0.03, Torpedo_Launcher_4: -0.04,
       Torpedo_Tubes_1: -0.01, Torpedo_Tubes_2: -0.02, Torpedo_Tubes_3: -0.03, Torpedo_Tubes_4: -0.04,
       Minelaying_Rails: -0.02,
@@ -487,9 +479,9 @@ class App extends Component {
       Floatplane_Catapult_1: -0.01, Floatplane_Catapult_2: -0.01,
       Hangar_Space: -0.05,
       Cruiser_Armor_1: -0.05, Cruiser_Armor_2: -0.075, Cruiser_Armor_3: -0.1, Cruiser_Armor_4: -0.125,
-      Battlecruiser_Armor_1: -0.15, Battlecruiser_Armor_2: -0.2, Battlecruiser_Armor_3: -0.25,
-      Battleship_Armor_1: -0.3, Battleship_Armor_2: -0.3, Battleship_Armor_3: -0.3,
-      SH_Armor: -0.35,
+      Battlecruiser_Armor_1: 0.05, Battlecruiser_Armor_3: -0.1,
+      Battleship_Armor_2: -0.05, Battleship_Armor_3: -0.1,
+      SH_Armor: -0.12,
       Carrier_Armor: -0.05
     },
     naval_range: {
@@ -604,7 +596,12 @@ class App extends Component {
     mines_planting: { Mines_1: { SS: 0.2 } },
     mines_sweeping: {},
     build_cost_ic: {
+      Light_Engine_1: 0.125, Light_Engine_2: 0.15, Light_Engine_3: 0.175, Light_Engine_4: 0.2,
+      Cruiser_Engine_1: 0.15, Cruiser_Engine_2: 0.175, Cruiser_Engine_3: 0.2, Cruiser_Engine_4: 0.225,
+      Heavy_Engine_1: 0.175, Heavy_Engine_2: 0.2, Heavy_Engine_3: 0.225, Heavy_Engine_4: 0.25,
+      Submarine_Engine_1: 0.1, Submarine_Engine_2: 0.125, Submarine_Engine_3: 0.15, Submarine_Engine_4: 0.2,
       Submarine_Designer: { CV: 0.1, BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1, SS: -0.1 },
+      Carrier_Engine_1: 0.1, Carrier_Engine_2: 0.125, Carrier_Engine_3: 0.15, Carrier_Engine_4: 0.175,
       Improved_Submarine_Designer: { CV: 0.1, BB: 0.1, BC: 0.1, CA: 0.1, CL: 0.1, DD: 0.1, SS: -0.15 },
       Evans_deakin_Designer: { DD: -0.1 },
       Convoy_escort_fleet_Designer: { CA: 0.1, CL: 0.1, DD: 0.1 },
@@ -1236,7 +1233,7 @@ class App extends Component {
         <div class="title">
           <br />
           <p id="title1">Naval calculator</p>
-          <p id="title2">Hearts of Iron IV 1.12.7</p>
+          <p id="title2">Hearts of Iron IV 1.13.4</p>
           <br />
         </div>
         <br />
@@ -5064,7 +5061,11 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Cruiser_Armor_1" class="grey">Cruiser Armor 1</option>
+            <option value="Cruiser_Armor_2" class="grey">Cruiser Armor 2</option>
+            <option value="Cruiser_Armor_3" class="grey">Cruiser Armor 3</option>
+            <option value="Cruiser_Armor_4" class="grey">Cruiser Armor 4</option>
           </select>
         </div>
       );
@@ -5160,7 +5161,11 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Cruiser_Armor_1" class="grey">Cruiser Armor 1</option>
+            <option value="Cruiser_Armor_2" class="grey">Cruiser Armor 2</option>
+            <option value="Cruiser_Armor_3" class="grey">Cruiser Armor 3</option>
+            <option value="Cruiser_Armor_4" class="grey">Cruiser Armor 4</option>
           </select>
         </div>
       );
@@ -5174,15 +5179,21 @@ class App extends Component {
             <option value="Empty">Empty</option>
             <option value="Hangar_Space" class="grey">Hangar Space</option>
             <option value="Carrier_Armor">Deck Armor</option>
+            <option value="Anti_Air_1" class="grey">Anti-Air 1</option>
+            <option value="Anti_Air_2" class="grey">Anti-Air 2</option>
+            <option value="Anti_Air_3" class="grey">Anti-Air 3</option>
+            <option value="Anti_Air_4" class="grey">Anti-Air 4</option>
+          </select>
+          <select class="equipselect" id="slot2">
+            <option value="Empty">Empty</option>
+            <option value="Hangar_Space" class="grey">Hangar Space</option>
+            <option value="Carrier_Armor">Deck Armor</option>
             <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
             <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
             <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
             <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
             <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
-          </select>
-          <select class="equipselect" id="slot2">
-            <option value="Locked">Locked</option>
           </select>
           <select class="equipselect" id="slot3">
             <option value="Locked">Locked</option>
@@ -5252,7 +5263,11 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Cruiser_Armor_1" class="grey">Cruiser Armor 1</option>
+            <option value="Cruiser_Armor_2" class="grey">Cruiser Armor 2</option>
+            <option value="Cruiser_Armor_3" class="grey">Cruiser Armor 3</option>
+            <option value="Cruiser_Armor_4" class="grey">Cruiser Armor 4</option>
           </select>
         </div>
       );
@@ -5283,7 +5298,15 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot3">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Hangar_Space" class="grey">Hangar Space</option>
+            <option value="Carrier_Armor">Deck Armor</option>
+            <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
+            <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
             <option value="Locked">Locked</option>
@@ -5350,7 +5373,11 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Cruiser_Armor_1" class="grey">Cruiser Armor 1</option>
+            <option value="Cruiser_Armor_2" class="grey">Cruiser Armor 2</option>
+            <option value="Cruiser_Armor_3" class="grey">Cruiser Armor 3</option>
+            <option value="Cruiser_Armor_4" class="grey">Cruiser Armor 4</option>
           </select>
         </div>
       );
@@ -5392,7 +5419,15 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot4">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Hangar_Space" class="grey">Hangar Space</option>
+            <option value="Carrier_Armor">Deck Armor</option>
+            <option value="Secondary_Battery_1" class="grey">Secondary Battery 1</option>
+            <option value="Secondary_Battery_2" class="grey">Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_1" class="grey">DP Secondary Battery 1</option>
+            <option value="DP_Secondary_Battery_2" class="grey">DP Secondary Battery 2</option>
+            <option value="DP_Secondary_Battery_3" class="grey">DP Secondary Battery 3</option>
+            <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot5">
             <option value="Locked">Locked</option>
@@ -5456,7 +5491,11 @@ class App extends Component {
             <option value="DP_Secondary_Battery_4" class="grey">DP Secondary Battery 4</option>
           </select>
           <select class="equipselect" id="slot14">
-            <option value="Locked">Locked</option>
+            <option value="Empty">Empty</option>
+            <option value="Cruiser_Armor_1" class="grey">Cruiser Armor 1</option>
+            <option value="Cruiser_Armor_2" class="grey">Cruiser Armor 2</option>
+            <option value="Cruiser_Armor_3" class="grey">Cruiser Armor 3</option>
+            <option value="Cruiser_Armor_4" class="grey">Cruiser Armor 4</option>
           </select>
         </div>
       );
