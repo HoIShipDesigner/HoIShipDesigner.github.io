@@ -1009,7 +1009,7 @@ class App extends Component {
         equ[s] = 1;
       }
     }
-    errormessage = 0;
+    var errormessage = 0;
     if (cla == "CA") {
       if (
         Object.keys(equ).indexOf("Light_Cruiser_Battery_1") != -1 ||
