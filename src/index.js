@@ -1009,7 +1009,7 @@ class App extends Component {
         equ[s] = 1;
       }
     }
-
+    errormessage = 0;
     if (cla == "CA") {
       if (
         Object.keys(equ).indexOf("Light_Cruiser_Battery_1") != -1 ||
@@ -1028,10 +1028,29 @@ class App extends Component {
       ) {
         document.getElementById("is_cruiser_valid").innerHTML =
           "This cruiser is invalid";
-      } else {
-        document.getElementById("is_cruiser_valid").innerHTML = "";
+        errormessage = 1;
       }
-    } else {
+    } 
+    if (cla == "DD" || cla == "CL" || cla == "CA") {
+        tempsumsonar = 0
+        if(Object.keys(equ).indexOf("ship_sonar_1") != -1){
+	  tempsumsonar = tempsumsonar + equ["ship_sonar_1"]
+	}
+	if(Object.keys(equ).indexOf("ship_sonar_2") != -1){
+	  tempsumsonar = tempsumsonar + equ["ship_sonar_2"]
+	}
+	if(Object.keys(equ).indexOf("ship_sonar_3") != -1){
+	  tempsumsonar = tempsumsonar + equ["ship_sonar_3"]
+	}
+	if(Object.keys(equ).indexOf("ship_sonar_4") != -1){
+	  tempsumsonar = tempsumsonar + equ["ship_sonar_4"]
+        }
+        if (tempsumsonar > 1) {
+          document.getElementById("is_cruiser_valid").innerHTML = "This design is invalid";
+          errormessage = 1;
+        }
+    }
+    if(errormessage == 0) {
       document.getElementById("is_cruiser_valid").innerHTML = "";
     }
 
