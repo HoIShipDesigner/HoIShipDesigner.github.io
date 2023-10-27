@@ -1032,7 +1032,7 @@ class App extends Component {
       }
     } 
     if (cla == "DD" || cla == "CL" || cla == "CA") {
-        tempsumsonar = 0
+        var tempsumsonar = 0
         if(Object.keys(equ).indexOf("ship_sonar_1") != -1){
 	  tempsumsonar = tempsumsonar + equ["ship_sonar_1"]
 	}
