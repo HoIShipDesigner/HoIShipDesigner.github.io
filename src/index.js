@@ -1044,6 +1044,16 @@ class App extends Component {
           errormessage = 1;
         }
     }
+    if (cla == "CV") {
+        var tempsumdeck = 0
+        if(Object.keys(equ).indexOf("Carrier_Armor") != -1){
+	  tempsumdeck = tempsumdeck + equ["Carrier_Armor"]
+	}
+        if (tempsumdeck > 1) {
+          document.getElementById("is_cruiser_valid").innerHTML = "This design is invalid";
+          errormessage = 1;
+        }
+    }
     if(errormessage == 0) {
       document.getElementById("is_cruiser_valid").innerHTML = "";
     }
