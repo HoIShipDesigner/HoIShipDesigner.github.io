@@ -1033,18 +1033,12 @@ class App extends Component {
     } 
     if (cla == "DD" || cla == "CL" || cla == "CA") {
         var tempsumsonar = 0
-        if(Object.keys(equ).indexOf("ship_sonar_1") != -1){
-	  tempsumsonar = tempsumsonar + equ["ship_sonar_1"]
+        if(Object.keys(equ).indexOf("Sonar_1") != -1){
+	  tempsumsonar = tempsumsonar + equ["Sonar_1"]
 	}
-	if(Object.keys(equ).indexOf("ship_sonar_2") != -1){
-	  tempsumsonar = tempsumsonar + equ["ship_sonar_2"]
+	if(Object.keys(equ).indexOf("Sonar_2") != -1){
+	  tempsumsonar = tempsumsonar + equ["Sonar_2"]
 	}
-	if(Object.keys(equ).indexOf("ship_sonar_3") != -1){
-	  tempsumsonar = tempsumsonar + equ["ship_sonar_3"]
-	}
-	if(Object.keys(equ).indexOf("ship_sonar_4") != -1){
-	  tempsumsonar = tempsumsonar + equ["ship_sonar_4"]
-        }
         if (tempsumsonar > 1) {
           document.getElementById("is_cruiser_valid").innerHTML = "This design is invalid";
           errormessage = 1;
